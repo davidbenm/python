@@ -2,10 +2,7 @@
 from datetime import datetime
 
 goal_and_deadline = input("Enter your goal and a deadline in the format 'goal:dd.mm.yyyy':\n")
-goal_and_deadline_list  = goal_and_deadline.split(":")
-
-goal = goal_and_deadline_list[0]
-deadline = goal_and_deadline_list[1]
+goal, deadline = goal_and_deadline.split(":", 1)
 
 deadline_date = datetime.strptime(deadline, "%d.%m.%Y")
 today_date = datetime.today()
